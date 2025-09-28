@@ -1,5 +1,5 @@
 import './Nav.css';
-import {Link} from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 function Nav(props)
 {
@@ -11,7 +11,7 @@ function Nav(props)
                     (
                         element => 
                         {
-                            return <li key={element}><Link to={props.navigation[element]}>{element}</Link></li>
+                            return <li key={element}><a href={`#${props.navigation[element]}`}>{element}</a></li>
                         }
                     )
                 }
