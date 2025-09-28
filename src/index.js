@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {HashRouter} from 'react-router-dom'; // <- HashRouter 
 import './index.css';
 import App from './components/App';
 
@@ -15,7 +16,9 @@ let nav =
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App navigation = {nav} />
+    <HashRouter>
+      <App navigation = {nav} />
+    </HashRouter>
   </React.StrictMode>
 );
 
