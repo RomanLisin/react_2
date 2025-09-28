@@ -4,14 +4,20 @@ import Header from './Header';
 import Nav from './Nav';
 import data from './db.json';
 import People from './People';
+import { useState } from 'react';
 
 function App(props) {
   let db = data.people;
+  const [filters, setFilters] = useState(null); // null- показывать всех
+  const handleSearch = (filters) => {
+    setFilters(filters);
+  };
+
   return (
     <div className="App">
-      <Header />
+      <Header onSearch={handleSearch}/>
       <Nav navigation={props.navigation} />
-      <People db = {db}/>
+      <People db = {db} filters={filters}/>
     </div>
   );
 }

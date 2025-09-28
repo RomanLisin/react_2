@@ -24,7 +24,10 @@
   display: flex;
   gap: 10px;
   margin: 0 auto; /* центрируем поиск */
-  max-width: 400px;
+  /* max-width: 400px; */
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .search-form input,
@@ -35,6 +38,22 @@
   border: 1px solid #ccc;
 }
 
+.search-form select {
+  padding: 8px 12px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 16px;
+}
+.search-form select option {
+  color: #000;
+  background: #fff;
+}
+.search-form select:focus {
+  outline: none;
+  border-color: #61dafb;
+}
 .search-form button {
   background-color: #61dafb;
   color: #282c34;
